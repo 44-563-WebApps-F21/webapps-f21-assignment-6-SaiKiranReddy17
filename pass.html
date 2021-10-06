@@ -24,9 +24,12 @@
     <input type="button" onclick="processPhrase()" value="Check the phrase"/>
 
 </form>
-<p>This text will be replaced </p>
 
 <div id="result"></div>
+<br><br>
+<div class="container">
+    <img src= "image/numbat.jpg" id="numbat" alt="numbat" height="200" width="200" onclick="newImage()">
+</div>
 
 <script> 
 
@@ -57,6 +60,25 @@ function processPhrase (){
     }
     resultDiv.innerHTML="Correct count: "+correct+'<br>'+" Worng count: "+wrong;
 }
+     var usingImage=1;
+     function newImage(){
+
+        Image=document.getElementById("numbat")
+
+        switch(usingImage){
+            case 1 : Image.src = "image/ant.jpg"
+                     usingImage =usingImage +1;
+                     break;
+            case 2 : Image.src = "image/lion.jpg"
+                     usingImage =usingImage +1;
+                     break; 
+            case 3 : Image.src = "image/numbat.jpg"
+                     usingImage =usingImage +1;
+                     break; 
+                           
+        } 
+     }
+
 </script>
 </body>
 </html> 
